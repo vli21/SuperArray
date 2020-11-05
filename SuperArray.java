@@ -11,6 +11,11 @@ public class SuperArray{
      data= new String[10];
      size=0;
   }
+
+  public SuperArray(int initialCapacity){
+    data = new String [initialCapacity];
+    size=0;
+  }
   /*-----
   Methods
   ------*/
@@ -27,6 +32,16 @@ public class SuperArray{
     return true;
   }
 
+  public void add(int index, String element){
+    if  (size == data.length){
+      resize();
+    }
+    for(int i=size-1;i>=index;i--){
+      data[i+1] = data[i];
+    }
+    data[index] = element;
+    size++;
+  }
   public String get(int index){
     return data[index];
   }
