@@ -107,4 +107,14 @@ public class SuperArray{
     }
     return has;
   }
+  public int indexOf(String s){
+    int here=-1;
+    for (int i=0; i <size; i++){
+      if (data[i].equals(s)){
+        here =i;
+        return here;
+      }
+    }
+    return here;
+  }
 }
