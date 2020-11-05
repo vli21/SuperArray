@@ -7,6 +7,7 @@ public class Tester {
     for(int i = 0; i < words.size(); i++){
       System.out.println( words.get(i) );
     }
+    System.out.println( words.toString());
 
     System.out.println (words.size());
 
@@ -16,11 +17,20 @@ public class Tester {
     words.add("hi");
     words.add("im");
     words.add("empty");
-    
-    for(int i = 0; i < words.size(); i++){
-      System.out.println( words.get(i) );
-    }
+
+    System.out.println(words.toString());
     System.out.println(words.isEmpty());
+    System.out.println(words.contains("empty"));
+    System.out.println(words.contains("ebi"));
+
+    words.add (1, "human");
+    System.out.println (words.toString());
+
+    words.set (2, "full");
+    System.out.println (words.toString());
+
+    words.remove(1);
+    System.out.println (words.toString());
 
 
   }
