@@ -37,23 +37,22 @@ public class SuperArray{
   }
 
   private void resize(){
-    String temp[] = new String [data.length+1];
+    String temp[] = new String [data.length * 2];
         for (int i=0; i < data.length; i++){
             temp[i] = data[i];
         }
         data = temp;
   }
-  /*----------------
-  Testing on example
-  ----------------*/
-  public static void main(String[] args) {
-    SuperArray words = new SuperArray();
-    words.add("kani");
-    words.add("uni");
-    words.add("ebi");
-    for(int i = 0; i < words.size(); i++){
-      System.out.println( words.get(i) );
-    }
-   }
+
+  public void clear(){
+    String temp[]= new String [10];
+    size = 0;
+    data = temp;
+  }
+
+  public boolean isEmpty() {
+    return size==0;
+  }
+
 
 }
