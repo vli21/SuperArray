@@ -54,5 +54,26 @@ public class SuperArray{
     return size==0;
   }
 
+  public String toString(){
+    String array = "[";
+    for (int i=0; i< size; i++){
+      if (i== size-1){
+        array+= data[i]+"]";
+      }
+      else{
+      array+=data [i]+", ";
+    }
+    }
+    return array;
+  }
 
+  public boolean contains(String s){
+    boolean has=false;
+    for (int i=0; i<size; i++){
+      if (data[i].equals (s)){
+        has =true;
+      }
+    }
+    return has;
+  }
 }
