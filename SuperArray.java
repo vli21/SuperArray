@@ -117,4 +117,9 @@ public class SuperArray{
     }
     return here;
   }
+  public String[] toArray(){
+    String storage[]=new String[size];
+    storage=data;
+    return storage;
+  }
 }
