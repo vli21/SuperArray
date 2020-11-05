@@ -42,13 +42,29 @@ public class SuperArray{
     data[index] = element;
     size++;
   }
+  public String remove(int index){
+    String removed;
+    if (index>=size ||index <0){
+      return "error";
+    }
+    else{
+      removed = data [index];
+      for(int i=index;i<size-1;i++){
+        data[i] = data[i+1];
+      }
+      data[size-1]=null;
+      size--;
+      return removed;
+    }
+  }
   public String get(int index){
     return data[index];
   }
 
   public String set(int index, String element){
+    String changed= data[index];
     data [index]= element;
-    return data[index];
+    return changed;
   }
 
   private void resize(){
