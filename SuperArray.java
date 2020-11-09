@@ -33,7 +33,7 @@ public class SuperArray{
   }
 
   public void add(int index, String element){
-    if  (size == data.length){
+    if  (size >= data.length){
       resize();
     }
     for(int i=size-1;i>=index;i--){
@@ -121,5 +121,17 @@ public class SuperArray{
     String storage[]=new String[size];
     storage=data;
     return storage;
+  }
+  public static void removeDuplicates(SuperArray s){
+    for (int i=0; i <s.size-1; i ++){
+      for (int j= i+1; j < s.size();){
+        if (s.get(i).equals(s.get(j))){
+          s.remove (j);
+        }
+        else{
+          j++
+        }
+      }
+    }
   }
 }
