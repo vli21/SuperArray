@@ -32,6 +32,24 @@ public class Tester {
     words.remove(1);
     System.out.println (words.toString());
 
+    System.out.println(words.indexOf("full"));
+    System.out.println(words.indexOf("hello"));
+    words.add ("full");
+    System.out.println(words.indexOf("full"));
+
+    SuperArray one= new SuperArray();
+    one.add("a");
+    one.add("b");
+    one.add("c");
+
+    SuperArray two= new SuperArray();
+    two.add("a");
+    two.add("b");
+    two.add("e");
+
+    System.out.println(one.equals(two));
+    System.out.println (one.lastIndexOf("b"));
+
 
   }
 }
