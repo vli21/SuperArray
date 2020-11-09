@@ -117,21 +117,21 @@ public class SuperArray{
     }
     return here;
   }
+
   public String[] toArray(){
     String storage[]=new String[size];
     storage=data;
     return storage;
   }
-  public static void removeDuplicates(SuperArray s){
-    for (int i=0; i <s.size-1; i ++){
-      for (int j= i+1; j < s.size();){
-        if (s.get(i).equals(s.get(j))){
-          s.remove (j);
-        }
-        else{
-          j++
-        }
+
+  public int lastIndexOf(String value) {
+    int index=0;
+    for (int i= size-1; i>=0; i--){
+      if (data[i].equals(value)){
+        index=i;
       }
     }
+    return index;
   }
+
 }
